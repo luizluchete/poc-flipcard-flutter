@@ -38,7 +38,7 @@ class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 1000),
       vsync: this,
     );
     _setupAnimation();
@@ -80,6 +80,7 @@ class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Card Animation test'),
       ),
@@ -103,10 +104,10 @@ class _MyWidgetState extends State<MyWidget> with SingleTickerProviderStateMixin
                 ],
               ),
             ),
-            TextButton(
-              onPressed: flipCard,
-              child: const Text('Virar'),
-            )
+            // TextButton(
+            //   onPressed: flipCard,
+            //   child: const Text('Virar'),
+            // )
           ],
         ),
       ),
